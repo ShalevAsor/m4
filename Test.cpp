@@ -111,8 +111,8 @@ City int_to_city(int val){
             return City::Mumbai;
         case City::NewYork:
             return City::NewYork;
-        case City::Oska:
-            return City::Oska;
+        case City::Osaka:
+            return City::Osaka;
         case City::Paris:
             return City::Paris;
         case City::Riyadh:
@@ -280,7 +280,7 @@ TEST_CASE("Player-Researcher"){
     CHECK_THROWS(res.discover_cure(Color::Red));//need 5 red cards
     res.take_card(City::Algiers);//1 blue card
     CHECK_THROWS(res.discover_cure(Color::Red));//need 5 red cards - has only 4 red and 1 blue 
-    res.take_card(City::Oska);
+    res.take_card(City::Osaka);
     CHECK_NOTHROW(res.discover_cure(Color::Red));//can discover cure without Research-station
     CHECK_THROWS(res.fly_direct(City::Bangkok));//Bangkok card already discarded 
     CHECK_NOTHROW(res.fly_charter(City::Tokyo)); // fly from Algiers to Tokyo
@@ -362,7 +362,7 @@ TEST_CASE("Player-GeneSplicer"){
     gen.take_card(City::NewYork);
     CHECK_NOTHROW(gen.build());
     CHECK_THROWS(gen.discover_cure(Color::Yellow));//no enough cards
-    gen.take_card(City::Sydney).take_card(City::Taipei).take_card(City::Oska).take_card(City::Tokyo);
+    gen.take_card(City::Sydney).take_card(City::Taipei).take_card(City::Osaka).take_card(City::Tokyo);
     CHECK_THROWS(gen.discover_cure(Color::Yellow));//need more 1 card 
     gen.take_card(City::HongKong);
     CHECK_NOTHROW(gen.discover_cure(Color::Yellow));//5 red cards 

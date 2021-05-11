@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"name": "🔍Decompiler!",
+			"uri": "decompileFs:/"
+		},
+		{
+			"path": "../../../mh/m3"
+		},
+		{
+			"path": ".."
+		}
+	],
+	"settings": {}
+}
